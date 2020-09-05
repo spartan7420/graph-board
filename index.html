@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvasio</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+
+
+		<div class="tools">
+			<p style="text-align: center;">Pen Color</p>
+			<div class="colorpallete">
+				<input type="button" id="red" class="color" style="background: red;" value="red">
+				<input type="button" id="blue" class="color" style="background: blue;" value="blue">
+				<input type="button" id="purple" class="color" style="background: purple;" value="purple">
+				<input type="button" id="yellow" class="color" style="background: yellow;" value="yellow">
+				<input type="button" id="green" class="color" style="background: green;" value="green">
+				<input type="button" id="brown" class="color" style="background: brown;" value="brown">
+				<input type="button" id="black" class="color" style="background: black;" value="black">
+				<input type="button" id="aqua" class="color" style="background: aqua;" value="aqua">
+				<input type="button" id="orange" class="color" style="background: orange;" value="orange">
+			</div>
+
+			<input type="button" class="clearCanvas" id="clearCanvas" value="Clear">
+			<input type="button" class="eraser" id="eraser" value="Erase">
+		</div>
+
+		<div class="content">
+
+				<div class="artboard" id="artboard">
+					<canvas id="canvas" ></canvas>
+				</div>
+
+		</div>
+
+	</div>
+</body>
+<script src="script.js" type="text/javascript"></script>
+</html>

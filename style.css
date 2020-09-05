@@ -1,0 +1,122 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+.tools {
+	position: fixed;
+	z-index: 3;
+	left: 0;
+	top: 0;
+	padding: 20px 15px;
+	color: white;
+	background: #141414;
+	height: 100vh;
+	width: 200px;
+}
+
+
+.colorpallete {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 10px;
+	margin-left: 12px;
+	margin-right: 2px;
+	width: 150px;
+}
+
+.color {
+	font-size: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	margin: 5px;
+	border: black 2px solid;
+	cursor: pointer;
+}
+
+.content {
+	background: #0f0f0f;
+}
+
+#canvas {
+    background-color: #fff;
+    background-size: 100% 1.2em;
+    background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -webkit-linear-gradient(#eee .05em, transparent .05em);
+    background-image: -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -moz-linear-gradient(#eee .05em, transparent .05em);
+    background-image: -ms-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -ms-linear-gradient(#eee .05em, transparent .05em);
+    background-image: -o-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -o-linear-gradient(#eee .05em, transparent .05em);
+    background-image: linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .05em, transparent .05em);
+    -pie-background: linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px) 0 0 / 100% 1.2em, linear-gradient(#eee .05em, transparent .05em) 0 0 / 100% 1.2em #fff;
+    behavior: url(/PIE.htc);
+   
+    position: relative;
+    display: block;	
+    float: right;
+	cursor: crosshair;
+	margin: 0;
+	padding: 0;
+}
+
+.clearCanvas {
+	color: white;
+	font-size: 1.5em;
+	margin-top: 50px;
+	background: #242424;
+	border: #efefef 1px solid;
+	border-radius: 4px;
+	height: 100px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.clearCanvas:hover {
+	background: black;
+}
+
+.eraser {
+	color: white;
+	font-size: 1.5em;
+	margin-top: 50px;
+	background: #242424;
+	border: #efefef 1px solid;
+	border-radius: 4px;
+	height: 100px;
+	width: 100%;
+	cursor: pointer;
+	width: 100%;
+}
+
+.eraser:hover {
+	background: black;
+}
+
+.smallbtn {
+	margin: 0;
+	color: white;
+	font-size: 1em;
+	margin-top: 50px;
+	background: #242424;
+	border: #efefef 1px solid;
+	border-radius: 4px;
+	height: 50px;
+	width: 70px;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.smallbtn:hover {
+	background: black;
+}
