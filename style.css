@@ -3,6 +3,14 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Noto Sans TC', sans-serif;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 body {
@@ -14,37 +22,60 @@ body {
 	overflow: hidden;
 }
 
+#title a{
+	text-decoration: none;
+	color: rgb(124, 124, 124);
+
+}
+
+#title {
+	text-align: center;	
+}
+
 .tools {
 	position: fixed;
 	z-index: 3;
 	left: 0;
 	top: 0;
 	padding: 20px 15px;
-	color: white;
-	background: #141414;
+	color: #2a2a2a;
+	background: #2a2a2a;
+	box-shadow: 3px 0px 5px rgb(168, 168, 168);
 	height: 100vh;
 	width: 200px;
 }
 
 
 .colorpallete {
-	display: flex;
+	position: fixed;
+	display: none;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-top: 10px;
-	margin-left: 12px;
-	margin-right: 2px;
-	width: 150px;
+	flex-direction: row;
+	left: 200px;
+	top: 95px;
+	height: 100px;
+	width: auto;
+	background-color: #2a2a2a;
+	box-shadow: 3px 3px 5px rgb(168, 168, 168);
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.show {
+	display: flex;
 }
 
 .color {
 	font-size: 0;
 	width: 40px;
-	height: 40px;
-	border-radius: 5px;
+	height: 60px;
+	border-radius: 3px;
 	margin: 5px;
-	border: black 2px solid;
+	border: none;
 	cursor: pointer;
+	background-image: url('pen.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .content {
@@ -52,41 +83,19 @@ body {
 }
 
 #canvas {
-    background-color: #fff;
-    background-size: 100% 1.2em;
-    background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -webkit-linear-gradient(#eee .05em, transparent .05em);
-    background-image: -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -moz-linear-gradient(#eee .05em, transparent .05em);
-    background-image: -ms-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -ms-linear-gradient(#eee .05em, transparent .05em);
-    background-image: -o-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -o-linear-gradient(#eee .05em, transparent .05em);
-    background-image: linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .05em, transparent .05em);
-    -pie-background: linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px) 0 0 / 100% 1.2em, linear-gradient(#eee .05em, transparent .05em) 0 0 / 100% 1.2em #fff;
-    behavior: url(/PIE.htc);
-   
+	background-color: #ffffff;
+    background-size: 80px 80px;
+    background-image: linear-gradient(to left, rgb(226, 226, 226) 1px, transparent 1px 100%),
+                      linear-gradient(to top, rgb(226, 226, 226) 1px, transparent 1px 100%);
+	
     position: relative;
     display: block;	
-    float: right;
 	cursor: crosshair;
 	margin: 0;
 	padding: 0;
 }
 
-.clearCanvas {
-	color: white;
-	font-size: 1.5em;
-	margin-top: 50px;
-	background: #242424;
-	border: #efefef 1px solid;
-	border-radius: 4px;
-	height: 100px;
-	width: 100%;
-	cursor: pointer;
-}
-
-.clearCanvas:hover {
-	background: black;
-}
-
-.eraser {
+.lg-button {
 	color: white;
 	font-size: 1.5em;
 	margin-top: 50px;
@@ -99,11 +108,11 @@ body {
 	width: 100%;
 }
 
-.eraser:hover {
+.lg-button:hover {
 	background: black;
 }
 
-.smallbtn {
+.small-btn {
 	margin: 0;
 	color: white;
 	font-size: 1em;
@@ -117,6 +126,6 @@ body {
 	margin-left: 5px;
 }
 
-.smallbtn:hover {
+.small-btn:hover {
 	background: black;
 }
