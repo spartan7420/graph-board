@@ -1,4 +1,3 @@
-// Bind canvas to listeners
 var canvas = document.getElementById('canvas');
 canvas.width = window.innerWidth;
 canvas.height = 1500;
