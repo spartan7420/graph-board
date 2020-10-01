@@ -3,12 +3,11 @@ canvas.width = window.innerWidth;
 canvas.height = 1500;
 var ctx = canvas.getContext('2d');
 var penColor = undefined;
-ctx.lineWidth = 5;
+ctx.lineWidth = 4;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 var started = false;
 var mode = undefined;
-var status = undefined;   //For color-pallete's display
 
 // create an in-memory canvas
 var memCanvas = document.createElement('canvas');
