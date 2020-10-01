@@ -69,7 +69,10 @@ canvas.addEventListener('mouseout', newPath);
 
 
 document.getElementById('clearCanvas').onclick = function () {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var check = confirm('Do you want to clear the canvas?');
+    if(check) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
 }
 
 document.getElementById('eraser').onclick =  function () {
