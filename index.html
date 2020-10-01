@@ -4,13 +4,13 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161019517-2"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	  gtag('config', 'UA-161019517-2');
+		gtag('config', 'UA-161019517-2');
 	</script>
-
+	
 	<title>Canvasio</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
@@ -20,27 +20,29 @@
 
 
 		<div class="tools">
-			<p style="text-align: center;">Pen Color</p>
-			<div class="colorpallete">
-				<input type="button" id="red" class="color" style="background: red;" value="red">
-				<input type="button" id="blue" class="color" style="background: blue;" value="blue">
-				<input type="button" id="purple" class="color" style="background: purple;" value="purple">
-				<input type="button" id="yellow" class="color" style="background: yellow;" value="yellow">
-				<input type="button" id="green" class="color" style="background: green;" value="green">
+			<div id="title"><a href="https://canvasio.in">Tools</a></div>
+			<div class="colorpallete" id="colorpallete">
+				<input type="button" id="blue" class="color" style="background: rgb(0, 0, 197);" value="blue">
+				<input type="button" id="purple" class="color" style="background: rgb(102, 0, 102);" value="purple">
+				<input type="button" id="green" class="color" style="background: rgb(10, 163, 10);" value="green">
+				<input type="button" id="aqua" class="color" style="background: rgb(0, 198, 224);" value="aqua">
+				<input type="button" id="red" class="color" style="background: rgb(235, 0, 0);" value="red">
+				<input type="button" id="orange" class="color" style="background: orange; " value="orange">
+				<input type="button" id="yellow" class="color" style="background: rgb(255, 255, 0);" value="yellow">
 				<input type="button" id="brown" class="color" style="background: brown;" value="brown">
 				<input type="button" id="black" class="color" style="background: black;" value="black">
-				<input type="button" id="aqua" class="color" style="background: aqua;" value="aqua">
-				<input type="button" id="orange" class="color" style="background: orange;" value="orange">
 			</div>
 
-			<input type="button" class="clearCanvas" id="clearCanvas" value="Clear">
-			<input type="button" class="eraser" id="eraser" value="Erase">
+			<input type="button" class="lg-button" id="colorchoice" value="Pen Color">
+			<input type="button" class="lg-button" id="clearCanvas" value="Clear">
+			<input type="button" class="lg-button" id="eraser" value="Erase">
+
 		</div>
 
 		<div class="content">
 
 				<div class="artboard" id="artboard">
-					<canvas id="canvas" ></canvas>
+					<canvas id="canvas"></canvas>
 				</div>
 
 		</div>
