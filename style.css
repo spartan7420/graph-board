@@ -39,7 +39,7 @@ body {
 	top: 0;
 	padding: 20px 15px;
 	color: #2a2a2a;
-	background: #2a2a2a;
+	background: #1f1f1f;
 	box-shadow: 3px 0px 5px rgb(168, 168, 168);
 	height: 100vh;
 	width: 200px;
@@ -55,7 +55,7 @@ body {
 	top: 95px;
 	height: 100px;
 	width: auto;
-	background-color: #2a2a2a;
+	background-color: #1f1f1f;
 	box-shadow: 3px 3px 5px rgb(168, 168, 168);
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
@@ -84,12 +84,12 @@ body {
 
 #canvas {
 	background-color: #ffffff;
-	background-size: 80px 80px;
-	background-image: linear-gradient(to left, rgb(226, 226, 226) 1px, transparent 1px 100%),
-			  linear-gradient(to top, rgb(226, 226, 226) 1px, transparent 1px 100%);
-
-	position: relative;
-	display: block;	
+    background-size: 80px 80px;
+    background-image: linear-gradient(to left, rgb(226, 226, 226) 1px, transparent 1px 100%),
+                      linear-gradient(to top, rgb(226, 226, 226) 1px, transparent 1px 100%);
+	
+    position: relative;
+    display: block;	
 	cursor: crosshair;
 	margin: 0;
 	padding: 0;
@@ -100,7 +100,7 @@ body {
 	font-size: 1.5em;
 	margin-top: 50px;
 	background: #242424;
-	border: #efefef 1px solid;
+	border:rgb(126, 126, 126) 1px solid;
 	border-radius: 4px;
 	height: 100px;
 	width: 100%;
@@ -121,9 +121,8 @@ body {
 	border: #efefef 1px solid;
 	border-radius: 4px;
 	height: 50px;
-	width: 70px;
+	width: 100%;
 	cursor: pointer;
-	margin-left: 5px;
 }
 
 .small-btn:hover {
