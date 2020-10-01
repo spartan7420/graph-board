@@ -84,12 +84,12 @@ body {
 
 #canvas {
 	background-color: #ffffff;
-    background-size: 80px 80px;
-    background-image: linear-gradient(to left, rgb(226, 226, 226) 1px, transparent 1px 100%),
-                      linear-gradient(to top, rgb(226, 226, 226) 1px, transparent 1px 100%);
-	
-    position: relative;
-    display: block;	
+	background-size: 80px 80px;
+	background-image: linear-gradient(to left, rgb(226, 226, 226) 1px, transparent 1px 100%),
+			  linear-gradient(to top, rgb(226, 226, 226) 1px, transparent 1px 100%);
+
+	position: relative;
+	display: block;	
 	cursor: crosshair;
 	margin: 0;
 	padding: 0;
