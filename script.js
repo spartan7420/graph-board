@@ -1,6 +1,6 @@
 var canvas = document.getElementById('canvas');
 canvas.width = window.innerWidth;
-canvas.height = 1500;
+canvas.height = 2000;
 var ctx = canvas.getContext('2d');
 var penColor = undefined;
 ctx.lineWidth = 4;
@@ -40,7 +40,11 @@ document.getElementById('eraser').onclick =  () => {        //Eraser
     drawPoints(ctx, points, e);
 };
 
-function showPallete() {    
+function showPallete() {
+    if(mode !== 'draw') {
+        mode = 'draw';
+        return;
+    }    
     document.getElementById('colorpallete').classList.toggle('show');
 };
 
@@ -48,10 +52,9 @@ function hidePallete() {
     document.getElementById('colorpallete').classList.remove('show');
 };
 
-
-// window.onbeforeunload = function() {
-//     return "you can not refresh the page";
-// }
+window.onbeforeunload = function() {
+    return "you can not refresh the page";
+}
 
 function setColor(event) {
     penColor = event.target.value;
