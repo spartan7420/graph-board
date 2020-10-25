@@ -66,6 +66,17 @@ function clearCanvas() {
     }
 }
 
+document.getElementById('title').addEventListener('click', () => {
+    var check = confirm('Do you want to clear the board?');
+    if(!check) {
+        return;
+    }
+});
+
+window.onbeforeunload = function() {
+    return "you can not refresh the page";
+}
+
 //Shows color pallete
 document.getElementById('draw').addEventListener('click', togglePallete);
 
@@ -160,9 +171,6 @@ function togglePallete() {
 };
 
 
-// window.onbeforeunload = function() {
-//     return "you can not refresh the page";
-// }
 
 
 
