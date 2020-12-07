@@ -10,7 +10,6 @@ window.addEventListener('load', ()=> {
     var lastStep = undefined;
     var visible = false;
 
-    canvas.selection = false;
 
     //Canvas Settings
     canvas.setDimensions({width:cWidth, height:cHeight});
