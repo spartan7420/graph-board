@@ -90,7 +90,7 @@ body {
 
 #canvas {
 	background-color: #ffffff;
-    background-size: 110px 110px;
+    background-size: 50px 50px;
     background-image: linear-gradient(to left, rgb(226, 226, 226) 1px, transparent 1px 100%),
                       linear-gradient(to top, rgb(226, 226, 226) 1px, transparent 1px 100%);
 	
@@ -103,7 +103,7 @@ body {
 
 .lg-button {
 	color: #2a2a2a;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	background: whitesmoke;
 	border:rgb(207, 207, 207) 1px solid;
 	border-radius: 4px;
@@ -144,7 +144,12 @@ body {
 	padding: 6px;
 	z-index: 50;
 	color: whitesmoke;
-	box-shadow: 0px 3px 5px rgb(168, 168, 168);
+	box-shadow: 0px 0px 8px rgb(168, 168, 168);
 	width: 75px;
 	cursor: pointer;
 }
+
+/* #undo, #redo, #select, #erase, #draw, #clear {
+	border-radius: 100%;
+	width: 50px;
+} */

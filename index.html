@@ -14,7 +14,7 @@
 	<title>EasyNote</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-
+	<script defer src="./js/all.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -34,14 +34,13 @@
 				<input type="button" id="black" class="color" style="background: rgb(15, 15, 15);" value="black">
 			</div>
 
-			<input type="button" class="lg-button" id="draw" value="Draw">
-			<input type="button" class="lg-button" id="clear" value="Clear">
-			<input type="button" class="lg-button" id="erase" value="Erase">
-			<input type="button" class="lg-button" id="select" value="Select">
-			<input type="button" class="lg-button" id="undo" value="Undo">
-			<input type="button" class="lg-button" id="redo" value="Redo">
-
-
+			<button class="lg-button" id="draw"><i class="fas fa-pen"></i></button>
+			<button class="lg-button" id="clear"><i class="far fa-trash-alt"></i></button>
+			<button class="lg-button" id="erase"><i class="fas fa-eraser"></i></button>
+			<button class="lg-button" id="select"><i class="fas fa-arrows-alt"></i></button>
+			<button class="lg-button" id="undo"><i class="fas fa-undo"></i></button>
+			<button class="lg-button" id="redo"><i class="fas fa-redo"></i></button>
+			<button class="lg-button" id="save"><i class="far fa-save"></i></button>
 		</div>
 		<div class="sign-in">
 			<p>Sign In</p>
