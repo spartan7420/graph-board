@@ -161,9 +161,9 @@ body {
 } */
 
 .pensize {
-	display: flex;
-	flex-direction: row;
 	cursor: pointer;
+	width: 100px;
+	height: 100%;
 }
 
 .pensize-btn {
@@ -192,14 +192,40 @@ body {
 	border: #efefef 1px solid;
 }
 
-.width-1 {
+.width {
 	position: relative;
-	left: 27%;
-	top: 20%;
 	border-radius: 100%;
-	height: 30px;
-	width: 30px;
-    vertical-align: middle;
-	text-align: center;
 	background-color: black;
+}
+
+.w-10 {
+	position: relative;
+	left: 40%;
+	top: 40%;
+	height: 10px;
+	width: 10px;
+}
+
+.w-6 {
+	position: relative;
+	left: 44%;
+	top: 44%;
+	height: 6px;
+	width: 6px;
+}
+
+.w-4 {
+	position: relative;
+	left: 44%;
+	top: 44%;
+	height: 4px;
+	width: 4px;
+}
+
+.w-3 {
+	position: relative;
+	left: 44%;
+	top: 44%;
+	height: 3px;
+	width: 3px;
 }

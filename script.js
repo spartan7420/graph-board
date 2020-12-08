@@ -14,7 +14,7 @@ window.addEventListener('load', ()=> {
     //Canvas Settings
     canvas.setDimensions({width:cWidth, height:cHeight});
     canvas.isDrawingMode = true;
-    canvas.freeDrawingBrush.width = 3;
+    canvas.freeDrawingBrush.width = 4;
     canvas.freeDrawingBrush.color = 'black';
     canvas.allowTouchScrolling = 'true';
     mode = 'draw';
@@ -119,6 +119,16 @@ window.addEventListener('load', ()=> {
         document.getElementById('colorpallete').classList.toggle('show');
     };
 
+    // var sizes = document.getElementsByClassName("size");
+
+    // var setSize = (e) => {
+    //     canvas.freeDrawingBrush.width = e.target.getAttribute('data-value');   
+    // };
+
+    // for (var i = 0; i < sizes.length; i++) {
+    //     sizes[i].addEventListener('click', setSize);
+    // }
+    
 
 
     //Brush Color Event-Listeners
