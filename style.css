@@ -14,9 +14,21 @@
 }
 
 body {
+	position: relative;
 	margin: 0;
 	padding: 0;
 }
+
+.overlay-spinner {
+	position: fixed;
+	z-index: 1000;
+	height: 100vh;
+	width: 100vw;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 50px;
+}
+
 
 .wrapper {
 	overflow: hidden;

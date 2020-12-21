@@ -17,8 +17,10 @@
 	<script defer src="./js/all.js"></script>
 </head>
 <body>
+<div class="overlay-spinner" id="overlay-spinner">
+	<img src="images\spinner.gif" alt="Loading">
+</div>
 	<div class="wrapper">
-
 		<div class="header">
 			<div class="tools">
 				<div id="title"><a href="https://canvasio.in">EasyNote</a></div>
@@ -30,7 +32,7 @@
 					<input type="button" id="red" class="color" style="background: #df2727;" value="#df2727">
 					<input type="button" id="orange" class="color" style="background: #ffa500; " value="#ffa500">
 					<input type="button" id="yellow" class="color" style="background: #ffff00;" value="#ffff00">
-					<input type="button" id="brown" class="color" style="background: #4e2601;" value="#4e2601">
+					<input type="button" id="brown" class="color" style="background: #808080;" value="#808080">
 					<input type="button" id="black" class="color" style="background: #0f0f0f;" value="#0f0f0f">
 					<!-- <div class="pensize">
 						<div class="size" data-value="10">
@@ -61,9 +63,9 @@
 				<button class="lg-button" id="redo"><i class="fas fa-redo"></i></button>
 				<button class="lg-button" id="save"><i class="far fa-save"></i></button>
 			</div>
-			<div class="sign-in">
+			<!-- <div class="sign-in">
 				<p>Sign In</p>
-			</div>
+			</div> -->
 		</div>
 
 		<div class="content">
