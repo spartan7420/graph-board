@@ -1,5 +1,5 @@
 window.addEventListener('load', ()=> {
-    document.getElementById('overlay-spinner').classList.remove('overlay-spinner');
+    document.getElementById('overlay-spinner').remove();
     const canvas = new fabric.Canvas(document.querySelector('canvas'), {
         isDrawingMode: true
     });
