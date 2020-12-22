@@ -41,7 +41,7 @@ body {
 	box-shadow: 0px 3px 8px rgb(168, 168, 168);
 	width: 100vw;
 	height: auto;
-	z-index: 4;
+	z-index: 100;
 }
 
 #title a {
@@ -152,19 +152,20 @@ body {
 	background: white;
 }
 
-.sign-in {
+.export-btn {
+	display: inline-block;
 	text-align: center;
 	position: absolute;
 	top: 10px;
 	right: 30px;
 	background-color: #00acee;
 	border-radius: 15px;
-	padding: 6px;
+	padding: 10px;
 	z-index: 50;
 	color: whitesmoke;
 	box-shadow: 0px 0px 8px rgb(168, 168, 168);
-	width: 75px;
 	cursor: pointer;
+	font-size: 12px;
 }
 
 /* #undo, #redo, #select, #erase, #draw, #clear {

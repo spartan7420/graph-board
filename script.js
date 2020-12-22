@@ -10,16 +10,22 @@ window.addEventListener('load', ()=> {
     var mode = undefined;
     var lastStep = undefined;
     var visible = false;
-
+    var exportCanvas = document.getElementById('export-canvas');
 
     //Canvas Settings
-    canvas.setDimensions({width:cWidth, height:cHeight});
+    canvas.setDimensions({ width: cWidth, height: cHeight });
     canvas.isDrawingMode = true;
     canvas.freeDrawingBrush.width = 4;
     canvas.freeDrawingBrush.color = 'black';
     canvas.allowTouchScrolling = 'true';
     mode = 'draw';
 
+    //Resize Canvas on viewport change
+    window.addEventListener('resize', resize);
+
+    function resize() {
+        canvas.setDimensions({ width: window.innerWidth, height: cHeight });
+    }
 
     //Sets color of pen
     function setColor(event) {
