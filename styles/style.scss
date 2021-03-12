@@ -1,0 +1,269 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans TC', sans-serif;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.overlay-spinner {
+	position: fixed;
+	z-index: 1000;
+	height: 100vh;
+	width: 100vw;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 50px;
+}
+
+
+.wrapper {
+	overflow: hidden;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	background: rgb(245, 245, 245);
+	box-shadow: 0px 3px 8px rgb(168, 168, 168);
+	width: 100vw;
+	height: 60px;
+	z-index: 100;
+}
+
+#title a {
+	text-decoration: none;
+	position: relative;
+	color: rgb(124, 124, 124);
+	top: 25%;
+}
+
+#title {
+	text-align: center;
+}
+
+.tools {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+	justify-content: space-around;
+	z-index: 3;
+	margin: auto;
+    gap: 20px;
+	color: #141414;
+	width: 60vw;
+	padding: 5px;
+    height: 60px;
+}
+
+.colorpallete {
+	position: fixed;
+	display: none;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	left: 20%;
+	top: 60px;
+	height: 60px;
+	width: auto;
+	background-color: whitesmoke;
+	box-shadow: 0px 3px 8px rgb(168, 168, 168);
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.show {
+	display: flex;
+}
+
+.color {
+	font-size: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	margin: 5px;
+	border: none;
+	cursor: pointer;
+	background-image: url('pen.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.content {
+	background: #0f0f0f;
+}
+.save-options {
+    display: inline;
+    width: 150px;
+}
+#save {
+    width: 150px;
+}
+.options {
+    display: none;
+    position: absolute;
+    width: 150px;
+    margin: 5px;
+    margin-right: 5px;
+    background-color: whitesmoke;
+    border: 1px solid #cfcfcf;
+    div {
+        padding: 5px 10px;
+        cursor: pointer;
+        i {
+            margin-right: 10px;
+        }
+    }
+    div:hover {
+        background-color: #c2c2c2;
+    }
+}
+.active-options {
+    display: block;
+}
+#canvas {
+	margin: 0;
+	padding: 0;
+}
+.grid-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.lg-button {
+	color: #2a2a2a;
+	font-size: 1.2em;
+	background: whitesmoke;
+	border:rgb(207, 207, 207) 1px solid;
+	border-radius: 4px;
+	height: 50px;
+	width: 80px;
+	cursor: pointer;
+}
+
+.lg-button:hover {
+	background: #757575;
+	color: whitesmoke
+}
+
+.small-btn {
+	margin: 0;
+	color: white;
+	font-size: 1em;
+	margin-top: 50px;
+	background: #242424;
+	border: #efefef 1px solid;
+	border-radius: 4px;
+	height: 50px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.small-btn:hover {
+	background: white;
+}
+
+.export-btn {
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	background-color: #00acee;
+	border-radius: 15px;
+	padding: 10px;
+	z-index: 50;
+	color: whitesmoke;
+	box-shadow: 0px 0px 8px rgb(168, 168, 168);
+	cursor: pointer;
+	font-size: 12px;
+}
+
+/* #undo, #redo, #select, #erase, #draw, #clear {
+	border-radius: 100%;
+	width: 50px;
+} */
+
+.pensize {
+	cursor: pointer;
+	width: 100px;
+	height: 100%;
+}
+
+.pensize-btn {
+	display: table;
+	width: 30px;
+	border: #efefef 1px solid;
+	height: 100%;
+	cursor: pointer;
+}
+
+.pensize-btn:hover {
+	background-color: #efefef;
+}
+
+.pensize-btn-icon {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.size {
+	position: relative;;
+	width: 60px;
+	height: 100%;
+	background-color: white;
+	border: #efefef 1px solid;
+}
+
+.width {
+	position: relative;
+	border-radius: 100%;
+	background-color: black;
+}
+
+.w-10 {
+	position: relative;
+	left: 40%;
+	top: 40%;
+	height: 10px;
+	width: 10px;
+}
+
+.w-6 {
+	position: relative;
+	left: 44%;
+	top: 44%;
+	height: 6px;
+	width: 6px;
+}
+
+.w-4 {
+	position: relative;
+	left: 44%;
+	top: 44%;
+	height: 4px;
+	width: 4px;
+}
+
+.w-3 {
+	position: relative;
+	left: 44%;
+	top: 44%;
+	height: 3px;
+	width: 3px;
+}
