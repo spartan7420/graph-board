@@ -29,6 +29,7 @@ body {
   z-index: 1000;
   height: 100vh;
   width: 100vw;
+  top: 0;
   background-color: #ffffff;
   text-align: center;
   padding: 50px;
@@ -42,11 +43,13 @@ body {
   position: fixed;
   top: 0;
   background: whitesmoke;
-  -webkit-box-shadow: 0px 3px 8px #a8a8a8;
-          box-shadow: 0px 3px 8px #a8a8a8;
+  -webkit-box-shadow: 0px 0px 5px #a8a8a8;
+          box-shadow: 0px 0px 5px #a8a8a8;
+  border-bottom: 1px solid #cfcfcf;
   width: 100vw;
-  height: 60px;
+  height: 70px;
   z-index: 100;
+  padding: 5px 0;
 }
 
 #title a {
@@ -129,43 +132,20 @@ body {
   background: #0f0f0f;
 }
 
-.save-options {
-  display: inline;
-  width: 150px;
-}
-
-#save {
-  width: 150px;
-}
-
-.options {
-  display: none;
-  position: absolute;
-  width: 150px;
-  margin: 5px;
-  margin-right: 5px;
-  background-color: whitesmoke;
-  border: 1px solid #cfcfcf;
-}
-
-.options div {
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.options div i {
-  margin-right: 10px;
-}
-
-.options div:hover {
-  background-color: #c2c2c2;
-}
-
 .active-options {
   display: block;
 }
 
 #canvas {
+  background-color: #ffffff;
+  background-image: url("../grid.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+.canvas-grid {
+  background-color: #ffffff;
+  background-image: none;
   margin: 0;
   padding: 0;
 }
@@ -302,5 +282,114 @@ body {
   top: 44%;
   height: 3px;
   width: 3px;
+}
+
+.modal-bg {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  visibility: 0;
+  display: none;
+}
+
+.modal-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.modal {
+  position: relative;
+  background-color: whitesmoke;
+  padding: 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#filename {
+  padding: 10px 10px;
+  width: 300px;
+}
+
+#save-img {
+  max-width: 300px;
+  min-width: 300px;
+  padding: 10px 50px;
+  color: whitesmoke;
+  border: none;
+  background-color: #1d69b1;
+  cursor: pointer;
+}
+
+#save-img:hover {
+  background-color: #1b497e;
+}
+
+#save-pdf {
+  max-width: 300px;
+  min-width: 300px;
+  padding: 10px 50px;
+  color: whitesmoke;
+  border: none;
+  background-color: #1d69b1;
+  cursor: pointer;
+}
+
+#save-pdf:hover {
+  background-color: #1b497e;
+}
+
+.download-status {
+  position: fixed;
+  display: none;
+  top: 90px;
+  right: 50px;
+  color: #141414;
+  background-color: whitesmoke;
+  padding: 10px 70px;
+  border: 1px solid #cfcfcf;
+}
+
+.download-status-active {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

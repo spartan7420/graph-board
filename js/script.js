@@ -12,7 +12,7 @@ window.addEventListener('load', ()=> {
     const cHeight = 3000;
     var mode = undefined;
     var visible = false;
-    var grid = true;
+
 
     //Canvas Settings
     canvas.setDimensions({ width: cWidth, height: cHeight });
@@ -21,9 +21,9 @@ window.addEventListener('load', ()=> {
     canvas.freeDrawingBrush.color = 'black';
     canvas.allowTouchScrolling = 'true';
     mode = 'draw';
-    canvas.setBackgroundColor({
-        source: 'grid.jpg'
-    }, canvas.renderAll.bind(canvas));
+    // canvas.setBackgroundColor({
+    //     source: 'grid.jpg'
+    // });
 
 
     window.addEventListener('resize', resize);
@@ -33,18 +33,26 @@ window.addEventListener('load', ()=> {
 
 
     //Toggle canvas grid pattern
-    const gridBtn = document.getElementById('grid');
+    // const gridBtn = document.getElementById('grid');
 
-    gridBtn.addEventListener('change', (e) => {
-        if (e.target.checked) {
-            canvas.setBackgroundColor({
+    // gridBtn.addEventListener('change', (e) => {
+    //     if (e.target.checked) {
+    //         canvas.setBackgroundColor({
+    //             source: 'grid.jpg'
+    //         }, canvas.renderAll.bind(canvas));  
+    //     }
+    //     else {
+    //         canvas.setBackgroundColor('rgb(255, 255, 255)' , canvas.renderAll.bind(canvas));   
+    //     }
+    // });
+
+    //Apply grid
+    const applyGrid = () => {
+        canvas.setBackgroundColor({
                 source: 'grid.jpg'
             }, canvas.renderAll.bind(canvas));  
         }
-        else {
-            canvas.setBackgroundColor('rgb(255, 255, 255)' , canvas.renderAll.bind(canvas));   
-        }
-    });
+
 
 
 
@@ -58,46 +66,70 @@ window.addEventListener('load', ()=> {
         return new Blob([u8arr], {type:mime});
     }
 
-    const saveMenu = document.getElementById('save');
-    const saveOptions = document.getElementById('options');
     const saveAsImg = document.getElementById('save-img');
     const saveAsPdf = document.getElementById('save-pdf');
 
-    saveMenu.addEventListener('click', () => {
-        saveOptions.classList.toggle('active-options');
-    }); 
-
     saveAsImg.addEventListener('click', () => {
-        downloadAsImage();
+        const modalBg = document.getElementById('modal-bg');
+        modalBg.classList.remove('modal-active');
+        setDownloadStatus();
+        applyGrid();
+        setTimeout(downloadAsImage, 1000);
     });
 
     saveAsPdf.addEventListener('click', () => {
-        downloadAsPdf();
+        const modalBg = document.getElementById('modal-bg');
+        modalBg.classList.remove('modal-active');
+        setDownloadStatus();
+        applyGrid();
+        setTimeout(downloadAsPdf, 1000);
+        
     });
-
+    const setDownloadStatus = () => {
+        const downloadStatus = document.getElementById('download-status');
+        downloadStatus.classList.add('download-status-active');
+    }
+    const unsetDownloadStatus = () => {
+        const downloadStatus = document.getElementById('download-status');
+        downloadStatus.classList.remove('download-status-active');
+    }
     const downloadAsImage =  () => {
-        var link = document.createElement("a");
-        var imgData = canvas.toDataURL({ 
+        const filename = document.getElementById('filename').value;
+        const link = document.createElement("a");
+        const imgData = canvas.toDataURL({ 
             format: 'jpeg',
             multiplier: 4
         });
-        var strDataURI = imgData.substr(22, imgData.length);
-        var blob = dataURLtoBlob(imgData);
-        var objurl = URL.createObjectURL(blob);
-        link.download = "mywork.jpg";
+        const strDataURI = imgData.substr(22, imgData.length);
+        const blob = dataURLtoBlob(imgData);
+        const objurl = URL.createObjectURL(blob);
+        link.download = `${filename}.jpg`;
         link.href = objurl;
         link.click();
+        unsetDownloadStatus();
     } 
 
     const downloadAsPdf = () => {
-        var imgData = canvas.toDataURL("image/jpeg", 1.0);
-        var pdf = new jsPDF();
-        var width = pdf.internal.pageSize.getWidth();
-        var height = pdf.internal.pageSize.getHeight();
+        const filename = document.getElementById('filename').value;
+        const imgData = canvas.toDataURL("image/jpeg", 1.0);
+        const pdf = new jsPDF('p', 'pt', 'a4', true);
+        const width = pdf.internal.pageSize.getWidth();
+        const height = pdf.internal.pageSize.getHeight();
         pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
-        pdf.save("mywork.pdf");
+        pdf.save(`${filename}.pdf`);
+        unsetDownloadStatus();
     }
 
+    //Filename Modal js
+    const modalBtn = document.getElementById('save');
+    const modalBg = document.getElementById('modal-bg');
+    const modalClose = document.getElementById('modal-close');
+    modalBtn.addEventListener('click', () => {
+        modalBg.classList.add('modal-active');
+    });
+    modalClose.addEventListener('click', () => {
+        modalBg.classList.remove('modal-active');
+    });
 
 
     //Sets color of pen
