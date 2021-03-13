@@ -17,7 +17,7 @@ window.addEventListener('load', ()=> {
     //Canvas Settings
     canvas.setDimensions({ width: cWidth, height: cHeight });
     canvas.isDrawingMode = true;
-    canvas.freeDrawingBrush.width = 4;
+    canvas.freeDrawingBrush.width = 3;
     canvas.freeDrawingBrush.color = 'black';
     canvas.allowTouchScrolling = 'true';
     mode = 'draw';
@@ -32,19 +32,6 @@ window.addEventListener('load', ()=> {
     }
 
 
-    //Toggle canvas grid pattern
-    // const gridBtn = document.getElementById('grid');
-
-    // gridBtn.addEventListener('change', (e) => {
-    //     if (e.target.checked) {
-    //         canvas.setBackgroundColor({
-    //             source: 'grid.jpg'
-    //         }, canvas.renderAll.bind(canvas));  
-    //     }
-    //     else {
-    //         canvas.setBackgroundColor('rgb(255, 255, 255)' , canvas.renderAll.bind(canvas));   
-    //     }
-    // });
 
     //Apply grid
     const applyGrid = () => {
@@ -111,7 +98,7 @@ window.addEventListener('load', ()=> {
 
     const downloadAsPdf = () => {
         const filename = document.getElementById('filename').value;
-        const imgData = canvas.toDataURL("image/jpeg", 0.8);
+        const imgData = canvas.toDataURL("image/jpeg", 1.0);
         const pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
         const width = pdf.internal.pageSize.getWidth();
         const height = pdf.internal.pageSize.getHeight();
@@ -166,9 +153,9 @@ window.addEventListener('load', ()=> {
     });
 
     //Prevent unwanted reload
-    // window.onbeforeunload = function() {
-    //     return "you can not refresh the page";
-    // }
+    window.onbeforeunload = function() {
+        return "you can not refresh the page";
+    }
 
     //Shows color pallete
     document.getElementById('draw').addEventListener('click', togglePallete);

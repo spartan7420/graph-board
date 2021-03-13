@@ -79,6 +79,7 @@ body {
 	left: 20%;
 	height: 60px;
 	top: 70px;
+	padding-right: 10px;
 	width: auto;
 	background-color: whitesmoke;
 	box-shadow: 0px 3px 8px rgb(168, 168, 168);
@@ -92,7 +93,17 @@ body {
 	flex-direction: row;
 	justify-content: space-between;
 }
-
+#pensize {
+	width: 100px;
+	margin-left: 20px;
+	background-color: whitesmoke;
+}
+// .size {
+// 	// display: inline-flex;
+// 	// width: 5px;
+// 	// height: 10px;
+// 	// background-color: #ffffff;
+// }
 .color {
 	font-size: 0;
 	width: 40px;
