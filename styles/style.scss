@@ -76,12 +76,9 @@ body {
 .colorpallete {
 	position: fixed;
 	display: none;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-between;
 	left: 20%;
-	top: 60px;
 	height: 60px;
+	top: 70px;
 	width: auto;
 	background-color: whitesmoke;
 	box-shadow: 0px 3px 8px rgb(168, 168, 168);
@@ -91,6 +88,9 @@ body {
 
 .show {
 	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .color {

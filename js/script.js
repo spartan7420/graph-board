@@ -111,11 +111,12 @@ window.addEventListener('load', ()=> {
 
     const downloadAsPdf = () => {
         const filename = document.getElementById('filename').value;
-        const imgData = canvas.toDataURL("image/jpeg", 1.0);
-        const pdf = new jsPDF('p', 'pt', 'a4', true);
+        const imgData = canvas.toDataURL("image/jpeg", 0.8);
+        const pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
         const width = pdf.internal.pageSize.getWidth();
         const height = pdf.internal.pageSize.getHeight();
-        pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
+
+        pdf.addImage(imgData, 'JPEG', 0, 0, width, height, undefined,'FAST');
         pdf.save(`${filename}.pdf`);
         unsetDownloadStatus();
     }
