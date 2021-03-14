@@ -1,0 +1,4 @@
+Sitemap: https://graphboard.netlify.app/sitemap.xml
+
+User-agent: *
+Disallow:

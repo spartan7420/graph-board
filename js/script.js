@@ -21,6 +21,7 @@ window.addEventListener('load', ()=> {
     canvas.freeDrawingBrush.color = 'black';
     canvas.allowTouchScrolling = 'true';
     mode = 'draw';
+    canvas.selection = true;
     // canvas.setBackgroundColor({
     //     source: 'grid.jpg'
     // });
