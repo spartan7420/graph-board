@@ -1,5 +1,5 @@
-# EasyNote
+# Graph Board
 A simple online whiteboard for online/offline meetings and classes.
 ***
 
-Deployed at: [easynotepro.netlify.app](https://easynotepro.netlify.app)
+Deployed at: [graphboard.netlify.app](https://graphboard.netlify.app)
