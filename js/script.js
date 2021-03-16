@@ -154,9 +154,9 @@ window.addEventListener('load', ()=> {
     });
 
     //Prevent unwanted reload
-    window.onbeforeunload = function() {
-        return "you can not refresh the page";
-    }
+    // window.onbeforeunload = function() {
+    //     return "you can not refresh the page";
+    // }
 
     //Shows color pallete
     document.getElementById('draw').addEventListener('click', togglePallete);
