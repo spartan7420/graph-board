@@ -18,7 +18,7 @@ window.addEventListener('load', ()=> {
     canvas.setDimensions({ width: cWidth, height: cHeight });
     canvas.isDrawingMode = true;
     canvas.freeDrawingBrush.width = 3;
-    canvas.freeDrawingBrush.color = 'black';
+    canvas.freeDrawingBrush.color = '#303030f1';
     canvas.allowTouchScrolling = 'true';
     mode = 'draw';
     canvas.selection = true;
