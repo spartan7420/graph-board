@@ -13,6 +13,11 @@ window.addEventListener('load', ()=> {
     var mode = undefined;
     var visible = false;
 
+    if(window.innerWidth < 1000) {
+        cHeight = 1500;
+    }
+
+    
     //Canvas Settings
     canvas.setDimensions({ width: cWidth, height: cHeight });
     canvas.isDrawingMode = true;
