@@ -170,6 +170,16 @@ body {
             align-items: center;
     margin-top: 35px;
   }
+  .show {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 200px;
+    width: 100px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .lg-button {
     height: 70px;
   }
@@ -192,7 +202,7 @@ body {
     position: absolute;
     display: block;
     padding: 15px 10px;
-    top: 250px;
+    top: 350px;
     background-color: #d6d6d6;
     left: 90px;
     margin: 20px 0;

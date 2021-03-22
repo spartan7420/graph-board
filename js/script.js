@@ -6,6 +6,7 @@ window.addEventListener('load', ()=> {
     document.getElementById('overlay-spinner').remove();
     const canvas = new fabric.Canvas(document.querySelector('canvas'), {
         isDrawingMode: true,
+        allowTouchScrolling: true,
         enableRetinaScaling: true
     });
     const cWidth = window.innerWidth;

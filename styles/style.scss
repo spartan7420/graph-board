@@ -144,6 +144,12 @@ body {
 		align-items: center;
 		margin-top: 35px;
 	}
+	.show {
+		flex-direction: column;
+		height: 200px;
+		width: 100px;
+		flex-wrap: wrap;
+	}
 	.lg-button {
 		height: 70px;
 	}
@@ -166,7 +172,7 @@ body {
 		position: absolute;
 		display: block;
 		padding: 15px 10px;
-		top: 250px;
+		top: 350px;
 		background-color: rgb(214, 214, 214);
 		left: 90px;
 		margin: 20px 0;
