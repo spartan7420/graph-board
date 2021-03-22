@@ -61,6 +61,7 @@ body {
 
 #title {
   text-align: center;
+  width: 100px;
 }
 
 .tools {
@@ -87,13 +88,12 @@ body {
 }
 
 .colorpallete {
-  position: fixed;
+  position: absolute;
   display: none;
-  left: 20%;
+  left: 10%;
   height: 60px;
-  top: 70px;
+  top: 65px;
   padding-right: 10px;
-  width: auto;
   background-color: whitesmoke;
   -webkit-box-shadow: 0px 3px 8px #a8a8a8;
           box-shadow: 0px 3px 8px #a8a8a8;
@@ -158,10 +158,12 @@ body {
             justify-content: flex-start;
   }
   .colorpallete {
-    margin-left: 5px;
+    position: fixed;
+    left: 101px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 35px;
   }
   .lg-button {
     height: 70px;
@@ -172,6 +174,7 @@ body {
   }
   #title {
     margin-bottom: 20px;
+    width: auto;
   }
   .overlay-spinner {
     padding: 0;
@@ -226,8 +229,7 @@ body {
 }
 
 .lg-button:hover {
-  background: #757575;
-  color: whitesmoke;
+  background: #dddddd;
 }
 
 .small-btn {
