@@ -40,7 +40,15 @@ window.addEventListener('load', ()=> {
                 source: 'grid.jpg'
             }, canvas.renderAll.bind(canvas));  
         }
-
+    
+    //Collapse Tools
+    const collpaseBtn = document.querySelector('.collapse-btn');
+    const header = document.querySelector('.header');
+    collpaseBtn.addEventListener('click', () => {
+        collpaseBtn.classList.toggle('collapsed');
+        header.classList.toggle('header-collapsed');
+        console.log("clicked");
+    });
 
 
 

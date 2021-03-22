@@ -116,6 +116,9 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.collapse-btn {
+	display: none;
+}
 
 @media screen and (max-width: 775px) {
 	.header {
@@ -131,7 +134,7 @@ body {
 		margin: 0;
 		top: 0px;
 		width: 80px;
-		height: 600px;
+		height: 700px;
 		justify-content: flex-start;
 	}
 	.colorpallete {
@@ -157,6 +160,38 @@ body {
 			margin-top: 100px;
 			width: 500px
 		}
+	}
+	.collapse-btn {
+		position: absolute;
+		display: block;
+		padding: 15px 10px;
+		top: 250px;
+		background-color: rgb(214, 214, 214);
+		left: 90px;
+		margin: 20px 0;
+		border-left: none;
+		border-top: rgb(207, 207, 207) 1px solid;
+		border-right: rgb(207, 207, 207) 1px solid;
+		border-bottom: rgb(207, 207, 207) 1px solid;
+		cursor: pointer;
+		color: rgb(71, 71, 71);
+		border-radius: 5px;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		.fa-chevron-right {
+			transform: rotate(-180deg);
+		}
+		&:hover {
+			background-color: rgb(168, 168, 168);
+		}
+	}
+	.collapsed {
+		.fa-chevron-right {
+			transform: rotate(0deg);
+		}
+	}
+	.header-collapsed {
+		transform: translateX(-100%);
 	}
 }
 

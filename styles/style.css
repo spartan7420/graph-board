@@ -135,6 +135,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.collapse-btn {
+  display: none;
+}
+
 @media screen and (max-width: 775px) {
   .header {
     height: 100vh;
@@ -152,7 +156,7 @@ body {
     margin: 0;
     top: 0px;
     width: 80px;
-    height: 600px;
+    height: 700px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -182,6 +186,39 @@ body {
   .overlay-spinner img {
     margin-top: 100px;
     width: 500px;
+  }
+  .collapse-btn {
+    position: absolute;
+    display: block;
+    padding: 15px 10px;
+    top: 250px;
+    background-color: #d6d6d6;
+    left: 90px;
+    margin: 20px 0;
+    border-left: none;
+    border-top: #cfcfcf 1px solid;
+    border-right: #cfcfcf 1px solid;
+    border-bottom: #cfcfcf 1px solid;
+    cursor: pointer;
+    color: #474747;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .collapse-btn .fa-chevron-right {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  .collapse-btn:hover {
+    background-color: #a8a8a8;
+  }
+  .collapsed .fa-chevron-right {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .header-collapsed {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
