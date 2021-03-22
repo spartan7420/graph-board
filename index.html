@@ -21,7 +21,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" type="text/css"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js" type="text/javascript"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+	integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+	crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="overlay-spinner" id="overlay-spinner">
@@ -77,6 +79,12 @@
 		</div>
 		<div class="download-status" id="download-status">
 			<p>Downloading...</p>
+		</div>
+
+		<!-- Scroll Button -->
+		<div class="scroll-btn-container">
+			<div class="scroll-btn" id="scroll-up"><i class="fas fa-chevron-up"></i></div>
+			<div class="scroll-btn" id="scroll-down"><i class="fas fa-chevron-down"></i></div>
 		</div>
 	</div>
 

@@ -37,6 +37,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   overflow: hidden;
 }
 
@@ -140,6 +141,10 @@ body {
   display: none;
 }
 
+.scroll-btn-container {
+  display: none;
+}
+
 @media screen and (max-width: 775px) {
   .header {
     height: 100vh;
@@ -233,6 +238,44 @@ body {
   .header-collapsed {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
+  }
+  .scroll-btn-container {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    right: 30px;
+    bottom: 60px;
+    gap: 20px;
+  }
+  .scroll-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: whitesmoke;
+    height: 40px;
+    width: 40px;
+    border-radius: 20%;
+    -webkit-box-shadow: 0 0 5px #797979;
+            box-shadow: 0 0 5px #797979;
+    cursor: pointer;
+  }
+  .scroll-btn:hover {
+    background-color: #dbdbdb;
   }
 }
 

@@ -33,6 +33,7 @@ body {
 
 
 .wrapper {
+	position: relative;
 	overflow: hidden;
 }
 
@@ -120,7 +121,9 @@ body {
 .collapse-btn {
 	display: none;
 }
-
+.scroll-btn-container {
+	display: none;
+}
 @media screen and (max-width: 775px) {
 	.header {
 		height: 100vh;
@@ -202,6 +205,29 @@ body {
 	}
 	.header-collapsed {
 		transform: translateX(-100%);
+	}
+	.scroll-btn-container {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		right: 30px;
+		bottom: 60px;
+		gap: 20px;
+	}
+	.scroll-btn {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: rgb(245, 245, 245);
+		height: 40px;
+		width: 40px;
+		border-radius: 20%;
+		box-shadow: 0 0 5px rgb(121, 121, 121);
+		cursor: pointer;
+		&:hover {
+			background-color: rgb(219, 219, 219);
+		}
 	}
 }
 

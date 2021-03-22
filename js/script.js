@@ -6,14 +6,12 @@ window.addEventListener('load', ()=> {
     document.getElementById('overlay-spinner').remove();
     const canvas = new fabric.Canvas(document.querySelector('canvas'), {
         isDrawingMode: true,
-        allowTouchScrolling: true,
         enableRetinaScaling: true
     });
-    const cWidth = window.innerWidth;
-    const cHeight = 3000;
+    let cWidth = window.innerWidth;
+    let cHeight = 3000;
     var mode = undefined;
     var visible = false;
-
 
     //Canvas Settings
     canvas.setDimensions({ width: cWidth, height: cHeight });
@@ -164,9 +162,46 @@ window.addEventListener('load', ()=> {
     });
 
     //Prevent unwanted reload
-    // window.onbeforeunload = function() {
-    //     return "you can not refresh the page";
-    // }
+    window.onbeforeunload = function() {
+        return "you can not refresh the page";
+    }
+
+    //Scroll Buttons
+
+    //===>Scroll Up
+    $('#scroll-up').on('mousedown', function() {
+        console.log('Start Animate');
+        (function smoothSrcroll() {
+            console.log(Math.max($('html').scrollTop(), $('body').scrollTop()));
+            $('html,body').stop().animate({
+                scrollTop: Math.max($('html').scrollTop(), $('body').scrollTop()) - 300
+            }, 1000, 'linear', function() {
+                window.timeout = setTimeout(smoothSrcroll(), 0);
+            });
+        })();
+    }).on('mouseup', function() {
+        console.log('Stop Animate');
+        $('html,body').stop();
+        clearTimeout(window.timeout);
+    });
+
+    //===>Scroll Down
+    $('#scroll-down').on('mousedown', function() {
+        console.log('Start Animate');
+        (function smoothSrcroll() {
+            console.log(Math.max($('html').scrollTop(), $('body').scrollTop()));
+            $('html,body').stop().animate({
+                scrollTop: Math.max($('html').scrollTop(), $('body').scrollTop()) + 300
+            }, 1000, 'linear', function() {
+                window.timeout = setTimeout(smoothSrcroll(), 0);
+            });
+        })();
+    }).on('mouseup', function() {
+        console.log('Stop Animate');
+        $('html,body').stop();
+        clearTimeout(window.timeout);
+    });
+
 
     //Shows color pallete
     document.getElementById('draw').addEventListener('click', togglePallete);
