@@ -213,6 +213,9 @@ body {
   .collapse-btn:hover {
     background-color: #a8a8a8;
   }
+  .collapse-btn:focus {
+    outline: none;
+  }
   .collapsed .fa-chevron-right {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);

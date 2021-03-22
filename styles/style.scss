@@ -185,6 +185,9 @@ body {
 		&:hover {
 			background-color: rgb(168, 168, 168);
 		}
+		&:focus {
+			outline: none;
+		}
 	}
 	.collapsed {
 		.fa-chevron-right {
