@@ -201,6 +201,8 @@ body {
   }
   .overlay-spinner img {
     margin-top: 100px;
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
     width: 500px;
   }
   .collapse-btn {
@@ -488,12 +490,12 @@ body {
 
 #filename {
   padding: 10px 10px;
-  width: 300px;
+  width: 100%;
 }
 
 #save-img {
   max-width: 300px;
-  min-width: 300px;
+  min-width: 100%;
   padding: 10px 50px;
   color: whitesmoke;
   border: none;
@@ -507,7 +509,7 @@ body {
 
 #save-pdf {
   max-width: 300px;
-  min-width: 300px;
+  min-width: 100%;
   padding: 10px 50px;
   color: whitesmoke;
   border: none;
