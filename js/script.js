@@ -45,6 +45,7 @@ window.addEventListener('load', ()=> {
     const collpaseBtn = document.querySelector('.collapse-btn');
     const header = document.querySelector('.header');
     collpaseBtn.addEventListener('click', () => {
+        togglePallete('hide');
         collpaseBtn.classList.toggle('collapsed');
         header.classList.toggle('header-collapsed');
         console.log("clicked");
@@ -227,14 +228,18 @@ window.addEventListener('load', ()=> {
     });
 
     //Color Pallete Toggle
-    function togglePallete() {
+    function togglePallete(status) {
+        if(status) {
+            if(status === 'hide') {
+                document.getElementById('colorpallete').classList.remove('show');
+                return;
+            }
+        }
         mode = 'draw';
         canvas.isDrawingMode = true;
         visible = true;
         document.getElementById('colorpallete').classList.toggle('show');
     };
-
-
 
 });
 
