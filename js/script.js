@@ -17,7 +17,7 @@ window.addEventListener('load', ()=> {
         cHeight = 1500;
     }
 
-    
+
     //Canvas Settings
     canvas.setDimensions({ width: cWidth, height: cHeight });
     canvas.isDrawingMode = true;
@@ -167,9 +167,9 @@ window.addEventListener('load', ()=> {
     });
 
     //Prevent unwanted reload
-    // window.onbeforeunload = function() {
-    //     return "you can not refresh the page";
-    // }
+    window.onbeforeunload = function() {
+        return "you can not refresh the page";
+    }
 
 
     //Shows color pallete
