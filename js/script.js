@@ -162,45 +162,9 @@ window.addEventListener('load', ()=> {
     });
 
     //Prevent unwanted reload
-    window.onbeforeunload = function() {
-        return "you can not refresh the page";
-    }
-
-    //Scroll Buttons
-
-    //===>Scroll Up
-    $('#scroll-up').on('mousedown', function() {
-        console.log('Start Animate');
-        (function smoothSrcroll() {
-            console.log(Math.max($('html').scrollTop(), $('body').scrollTop()));
-            $('html,body').stop().animate({
-                scrollTop: Math.max($('html').scrollTop(), $('body').scrollTop()) - 300
-            }, 1000, 'linear', function() {
-                window.timeout = setTimeout(smoothSrcroll(), 0);
-            });
-        })();
-    }).on('mouseup', function() {
-        console.log('Stop Animate');
-        $('html,body').stop();
-        clearTimeout(window.timeout);
-    });
-
-    //===>Scroll Down
-    $('#scroll-down').on('mousedown', function() {
-        console.log('Start Animate');
-        (function smoothSrcroll() {
-            console.log(Math.max($('html').scrollTop(), $('body').scrollTop()));
-            $('html,body').stop().animate({
-                scrollTop: Math.max($('html').scrollTop(), $('body').scrollTop()) + 300
-            }, 1000, 'linear', function() {
-                window.timeout = setTimeout(smoothSrcroll(), 0);
-            });
-        })();
-    }).on('mouseup', function() {
-        console.log('Stop Animate');
-        $('html,body').stop();
-        clearTimeout(window.timeout);
-    });
+    // window.onbeforeunload = function() {
+    //     return "you can not refresh the page";
+    // }
 
 
     //Shows color pallete
